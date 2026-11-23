@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      .bg {
+        background-image: url(img/ground.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        font-weight: bold;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg">
+      <h3>
+        <img src="img/title.png" />
+      </h3>
+      <div>숫자를 맞추면 홈런! : <span id="result">up/down/Homerun</span></div>
+      <div class="d-inline-flex align-items-center gap-2">
+        <span>숫자입력</span>
+        <input
+          id="user"
+          type="text"
+          class="form-control w-auto fs-4 text-center"
+          placeholder="1부터 20까지의 수"
+        />
+        <button id="play" class="btn btn-warning btn-lg fw-bold">시작</button>
+      </div>
+    </div>
+  </body>
+  <script src="test.js"></script>
+</html>
+<!--
+html 요소 가져오기
+1 ~ 100까지 숫자 만들기(random)
+user에 숫자를 입력하고 play버튼을 클릭하면
+입력한 값을 변수에 담아야함
+(.value)
+user가 입력한 수와 컴퓨터가 random으로 만든 수를 비교
+com > user == up
+com < user == down
+com = user == bingo
+-->
