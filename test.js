@@ -40,5 +40,6 @@ function Startgame() {
   }
 
   title.style.display = "none";
+  user.value = "";
 }
 playBtn.addEventListener("click", Startgame);
