@@ -43,6 +43,11 @@
           id="user"
           type="text"
           class="form-control w-auto fs-4 text-center"
+          onkeypress="
+            if (event.keyCode == 13) {
+              Startgame();
+            }
+          "
           placeholder="1부터 20까지의 수"
         />
         <button id="play" class="btn btn-warning btn-lg fw-bold">시작</button>

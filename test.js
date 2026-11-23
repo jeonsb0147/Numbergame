@@ -1,7 +1,7 @@
 // html요소
 let result = document.querySelector("#result");
 let user = document.querySelector("#user");
-let play = document.querySelector("#play");
+let playBtn = document.querySelector("#play");
 let bg = document.querySelector(".bg");
 let title = document.querySelector("h3");
 
@@ -11,8 +11,8 @@ let comNum = Math.floor(num * 20) + 1;
 // console.log(comNum);
 
 // input에 입력한 값이 출력됨
-play.addEventListener("click", () => {
-  let userNum = user.value;
+function Startgame() {
+  let userNum = Number(user.value);
 
   if (comNum > userNum) {
     result.textContent = "up";
@@ -40,4 +40,5 @@ play.addEventListener("click", () => {
   }
 
   title.style.display = "none";
-});
+}
+playBtn.addEventListener("click", Startgame);
